@@ -221,5 +221,5 @@ app.post("/passwordchange",async function(req,res){
     }
 })
 
-app.listen(3001,()=>{console.log("server listening on port 3001")})
+app.listen(process.env.PORT || 3001)
 
