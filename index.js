@@ -19,7 +19,7 @@ let options = {
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'hotmail',
   auth: {
     user: process.env.USER_NAME,
     pass: process.env.PASS_WORD
@@ -166,7 +166,7 @@ app.post("/reset",async function(req,res){
     // send password reset code to customer
 
     var mailOptions = {
-        from: 'philosophykathir@gmail.com',
+        from: 'hkathiresan@outlook.com',
         to: req.body.email,
         subject: 'PASSWORD RESET CODE',
         text: `SECRET CODE :${req.body.secret}`
