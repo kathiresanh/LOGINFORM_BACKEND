@@ -23,7 +23,7 @@ var transporter = nodemailer.createTransport({
   auth: {
       type:"OAuth2",
     user: "philosophykathir@gmail.com",
-    pass: "KA.philosophy"
+    pass: process.env.PASS_WORD
   }
 });
 
