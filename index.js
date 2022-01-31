@@ -19,10 +19,10 @@ let options = {
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
-  service: 'hotmail',
+  service: 'gmail',
   auth: {
-    user: process.env.USER_NAME,
-    pass: process.env.PASS_WORD
+    user: "philosophykathir@gmail.com",
+    pass: "KA.philosophy"
   }
 });
 
@@ -70,7 +70,7 @@ try {
         // send activation link to customer
     
         var mailOptions = {
-            from: process.env.USER_NAME,
+            from: "philosophykathir@gmail.com",
             to: req.body.email,
             subject: 'welcome to ionix',
             text: `https://loginformbackend.herokuapp.com/activation/${req.body.email}/${req.body.token}`
@@ -166,7 +166,7 @@ app.post("/reset",async function(req,res){
     // send password reset code to customer
 
     var mailOptions = {
-        from: 'hkathiresan@outlook.com',
+        from: 'philosophykathir@gmail.com',
         to: req.body.email,
         subject: 'PASSWORD RESET CODE',
         text: `SECRET CODE :${req.body.secret}`
